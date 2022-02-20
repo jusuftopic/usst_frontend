@@ -6043,6 +6043,14 @@ hr {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 500px){
+  .slider-area{
+    background-image: url(../img/cr.png);
+  }
+}
+
+
+
 /* line 1486, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_blog_page.scss */
 .comment-form .form-group {
   margin-bottom: 30px;
