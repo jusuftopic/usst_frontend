@@ -4508,12 +4508,7 @@ hr {
   z-index: 1;
 }
 
-@media screen and (max-width: 600px){
-  .slider-area{
-    background-image: url(../img/wallpapper_mobile2.jpg);
-  }
 
-}
 
 /* line 9, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_team.scss */
 .team-area .single-cat .cat-icon img {
