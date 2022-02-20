@@ -1,1 +1,162 @@
-<p>blog-main works!</p>
+<app-preloader [triggerLoaderAgain]="triggerLoader"></app-preloader>
+<app-hero-sub [title]="title"></app-hero-sub>
+<section class="blog_area section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="blog_left_sidebar">
+          <article class="blog_item">
+            <div class="blog_item_img">
+              <img class="card-img rounded-0" src="assets/img/blog/welcome.jpeg" alt="">
+              <a  class="blog_item_date">
+                <h3>20</h3>
+                <p>Feb</p>
+              </a>
+            </div>
+            <div class="blog_details">
+              <a class="d-inline-block" href="blog_details.html">
+                <h2 class="blog-head" style="color: white;">Dobrodošli!</h2>
+              </a>
+              <p class="blog-subtitle">Dobrodošli na blog! Uskoro vas očekuje mnogo zanimljivog sadržaja.</p>
+              <ul class="blog-info-link">
+                <li><a class="author"><i class="fa fa-user"></i>Igor Abdihodžić</a></li>
+              </ul>
+            </div>
+          </article>
+          <nav class="blog-pagination justify-content-center d-flex">
+            <ul class="pagination">
+              <li class="page-item">
+                <a (click)="onPageReload()" class="page-link" aria-label="Previous">
+                  <i class="ti-angle-left"></i>
+                </a>
+              </li>
+              <li class="page-item">
+                <a (click)="onPageReload()" class="page-link">1</a>
+              </li>
+              <li class="page-item">
+                <a (click)="onPageReload()" class="page-link" aria-label="Next">
+                  <i class="ti-angle-right"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="blog_right_sidebar">
+          <aside class="single_sidebar_widget search_widget">
+            <form>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder='Pretraga'
+                         onfocus="this.placeholder = ''"
+                         onblur="this.placeholder = 'Pretraga'">
+                  <div class="input-group-append">
+                    <button (click)="onPageReload()" class="btns" type="button"><i class="ti-search"></i></button>
+                  </div>
+                </div>
+              </div>
+              <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                      type="submit">Pretraga</button>
+            </form>
+          </aside>
+          <aside class="single_sidebar_widget post_category_widget">
+            <h4 class="widget_title" style="color: #2d2d2d;">Kategorije</h4>
+            <ul class="list cat-list">
+              <li>
+                <a (click)="onPageReload()" class="d-flex">
+                  <p>Trening</p>
+                  <p>(0)</p>
+                </a>
+              </li>
+              <li>
+                <a (click)="onPageReload()" class="d-flex">
+                  <p>Prehrana</p>
+                  <p>(0)</p>
+                </a>
+              </li>
+              <li>
+                <a (click)="onPageReload()" class="d-flex">
+                  <p>Ostalo</p>
+                  <p>(1)</p>
+                </a>
+              </li>
+            </ul>
+          </aside>
+          <aside class="single_sidebar_widget popular_post_widget">
+            <h3 class="widget_title" style="color: #2d2d2d;">Nedavni postovi</h3>
+            <div (click)="onPageReload()" class="media post_item">
+              <img src="assets/img/blog/welcome.jpeg" alt="post">
+              <div class="media-body">
+                <a >
+                  <h3 style="color: #2d2d2d;">Dobrodošli!</h3>
+                </a>
+                <p>Februar 20, 2022</p>
+              </div>
+            </div>
+          </aside>
+          <aside class="single_sidebar_widget tag_cloud_widget">
+            <h4 class="widget_title" style="color: #2d2d2d;">Tagovi</h4>
+            <ul class="list">
+              <li>
+                <a (click)="onPageReload()">trening</a>
+              </li>
+              <li>
+                <a (click)="onPageReload()">motivacija</a>
+              </li>
+              <li>
+                <a (click)="onPageReload()">prehrana</a>
+              </li>
+              <li>
+                <a (click)="onPageReload()">snaga</a>
+              </li>
+              <li>
+                <a (click)="onPageReload()">performanse</a>
+              </li>
+              <li>
+                <a (click)="onPageReload()">napredak</a>
+              </li>
+            </ul>
+          </aside>
+
+          <aside class="single_sidebar_widget instagram_feeds">
+            <h4 class="widget_title" style="color: #2d2d2d;">Instagram Feeds</h4>
+            <ul class="instagram_row flex-wrap">
+              <li>
+                <a href="https://www.instagram.com/p/CXQn2W8KdSmx63XwCyb3KbgDaD016nQITaNA0I0/" target="_blank">
+                  <img class="img-fluid" src="assets/img/ig-feed/feed1.jpeg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/p/CS6TWwvNBxLeCTckdJQStb1OQJCS9bso2-5Ybk0/" target="_blank">
+                  <img class="img-fluid" src="assets/img/ig-feed/feed2.jpeg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/p/BwFxes6FIpfY6rWx_r3uZv_m3ib3SCGA8FVK7M0/" target="_blank">
+                  <img class="img-fluid" src="assets/img/ig-feed/feed3.jpeg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/p/Bv9_TExF8WN4DtsBOPidbpoJMWYF1bzgNHYXGg0/" target="_blank">
+                  <img class="img-fluid" src="assets/img/ig-feed/feed4.jpeg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/p/BvrhXLqFdOROUnYEV412LDT-pS2-Md9b5zboDk0/" target="_blank">
+                  <img class="img-fluid" src="assets/img/ig-feed/feed5.jpeg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/p/BvoDvbPlPMZoef76j1ORPZ9281XJSFvRcu56os0/" target="_blank">
+                  <img class="img-fluid" src="assets/img/ig-feed/feed6.jpeg" alt="">
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,1 +1,78 @@
-<p>contact works!</p>
+<app-preloader [triggerLoaderAgain]="triggerLoader"></app-preloader>
+<app-hero-sub [title]="title"></app-hero-sub>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 style="color: white" class="contact-title">Kontakt</h2>
+      </div>
+      <div class="col-lg-8">
+        <form class="form-contact contact_form" [formGroup]="contactForm" id="contactForm" novalidate="novalidate" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <input class="form-control" formControlName="email" name="subject" id="subject" type="email" (keyup) = checkValidity()
+                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" placeholder="Email">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input class="form-control valid" formControlName="firstname" name="name" id="name" type="text" (keyup) = checkValidity()
+                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ime'" placeholder="Ime">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input class="form-control valid" formControlName="lastname" name="email" id="text" type="text"  (keyup) = checkValidity()
+                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'Prezime'" placeholder="Prezime">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <textarea class="form-control w-100" formControlName="message" name="message" id="message" cols="30" rows="9" (keyup) = checkValidity()
+                          onfocus="this.placeholder = ''" onblur="this.placeholder = 'Poruka'" placeholder="Unesi poruku"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div  id="policyCol" class="form-group">
+              <input class="form-control valid" formControlName="agreePolicy" id="policyInput" type="checkbox" (change)="checkPrivacyAgree( $event)"
+                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'Prezime'">
+              <span >Slažem se s <i (click)="onOpenPrivacyPolicy()" style="color: lightgreen">politikom privatnosti</i> </span>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <button [ngClass]="{'disable': disableButton}" type="submit"  [disabled]="disableButton" class="btn-info">Pošalji</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-3 offset-lg-1">
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-home"></i></span>
+          <div class="media-body">
+            <h3>Bihać, Bosna i Hercegovina</h3>
+            <p>Hamdije Čemerlića 20</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+          <div class="media-body">
+            <h3>Telefon</h3>
+            <p>061/368-330</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-email"></i></span>
+          <div class="media-body">
+            <h3>Email</h3>
+            <p><a href="mailto:igor.abdihodzic@gmail.com">igor.abdihodzic@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

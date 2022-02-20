@@ -2,3 +2,42 @@
   margin-top: 250px;
   margin-left: 50px;
 }
+
+
+@media only screen and (min-width: 390px) and (max-width: 700px){
+
+
+  .hero__caption h1{
+    display: none;
+  }
+
+  .hero__caption span{
+    font-size: 45px;
+    margin-left: 30px;
+
+  }
+}
+
+@media only screen and (min-width: 310px) and (max-width: 399px){
+
+
+  .hero__caption h1{
+    display: none;
+  }
+
+  .hero__caption span{
+    font-size: 32px;
+
+  }
+}
+
+
+@media only screen and (max-width: 330px) {
+
+  .hero__caption h1{
+    display: none;
+  }
+  .hero__caption span{
+    font-size: 25px;
+  }
+}

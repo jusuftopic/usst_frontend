@@ -1,0 +1,38 @@
+.media-body h3{
+  color: grey;
+}
+
+.media-body p{
+  color: white;
+}
+
+button{
+  width: 135px;
+  height: 45px;
+}
+
+.disable{
+  background: grey;
+  border: grey;
+}
+
+.row * {
+  color: white;
+}
+
+#policyCol{
+  display: flex;
+  align-items: center;
+}
+
+#policyCol span{
+  font-size: 12px;
+}
+
+#policyCol span i{
+  cursor: pointer;
+}
+
+#policyInput{
+  width: 25px;
+}

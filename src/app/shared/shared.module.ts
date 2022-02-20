@@ -5,14 +5,16 @@ import { HeroComponent } from './hero/hero.component';
 import { TrainingCategoryComponent } from './training-category/training-category.component';
 import { OfferComponent } from './offer/offer.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { AboutComponent } from './about/about.component';
 import { BlogSharedComponent } from './blog-shared/blog-shared.component';
 import { ServiceSharedComponent } from './service-shared/service-shared.component';
+import {AboutComponent} from './about/about.component';
+import { HeroSubComponent } from './hero-sub/hero-sub.component';
+import {RouterModule} from '@angular/router';
 
 
 
 @NgModule({
-  declarations: [PreloaderComponent, HeroComponent, TrainingCategoryComponent, OfferComponent, GalleryComponent, AboutComponent, BlogSharedComponent, ServiceSharedComponent],
+  declarations: [PreloaderComponent, HeroComponent, TrainingCategoryComponent, OfferComponent, GalleryComponent, AboutComponent, BlogSharedComponent, ServiceSharedComponent, HeroSubComponent],
   exports: [
     PreloaderComponent,
     HeroComponent,
@@ -21,10 +23,12 @@ import { ServiceSharedComponent } from './service-shared/service-shared.componen
     GalleryComponent,
     AboutComponent,
     BlogSharedComponent,
-    ServiceSharedComponent
+    ServiceSharedComponent,
+    HeroSubComponent
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule
+    ]
 })
 export class SharedModule { }

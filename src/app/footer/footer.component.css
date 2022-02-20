@@ -1,0 +1,43 @@
+.col-sm-3 p{
+  color: white;
+}
+
+
+.footer-social a i{
+  margin-top: 35%;
+}
+
+li a{
+  cursor: pointer;
+}
+
+.footer_flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.developer_info .made_by{
+  font-size: 15px;
+  color: white;
+  margin-top: 5px;
+}
+
+.developer_info .footer-social{
+  margin-top: 15px
+}
+
+.developer_info .footer-social a{
+  size: 12px;
+}
+.footer-logo img {
+  width: 146px;
+  height: 68px;
+}
+
+@media screen and (max-width: 1000px){
+  .footer_flex{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

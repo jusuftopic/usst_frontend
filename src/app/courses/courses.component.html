@@ -1,1 +1,4 @@
-<p>courses works!</p>
+<app-preloader [triggerLoaderAgain]=""></app-preloader>
+<app-hero-sub [title]="title"></app-hero-sub>
+<app-training-category (individualCourseEmitter)="individualClick()"
+                       (groupCourseEmitter)="groupClick()"></app-training-category>

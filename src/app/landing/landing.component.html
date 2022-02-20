@@ -1,9 +1,10 @@
 <app-preloader></app-preloader>
 <app-hero></app-hero>
 <app-about></app-about>
-<app-training-category></app-training-category>
+<app-training-category (groupCourseEmitter)="onGroupCourseClick()"
+(individualCourseEmitter)="onIndividualCourseClick()"></app-training-category>
 <app-offer></app-offer>
-<app-gallery></app-gallery>
+<app-gallery [displayOverlay]="displayGalleryOverlay"></app-gallery>
 <app-blog-shared></app-blog-shared>
 <app-service-shared></app-service-shared>
 

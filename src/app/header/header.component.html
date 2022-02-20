@@ -4,28 +4,44 @@
       <div class="menu-wrapper d-flex align-items-center justify-content-between">
         <!-- Logo -->
         <div class="logo">
-          <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+          <a routerLink="/landing"><img id="header-logo" src="assets/img/logo/header_logo2-removebg-preview.png" alt=""></a>
         </div>
         <!-- Main-menu -->
         <div class="main-menu f-right d-none d-lg-block">
           <nav>
             <ul id="navigation">
-              <li><a href="">Početna</a></li>
-              <li><a href="">O meni</a></li>
-              <li><a href="">Kursevi</a></li>
-              <li><a href="">Galerija</a></li>
-              <li><a href="">Blog</a></li>
-              <li><a href="">Kontakt</a></li>
+              <li><a routerLink="/landing">Početna</a></li>
+              <li><a routerLink="/about" >O meni</a></li>
+              <li><a routerLink="/courses">Kursevi</a></li>
+              <li><a routerLink="/gallery">Galerija</a></li>
+              <li><a routerLink="/blog">Blog</a></li>
+              <li><a routerLink="/contact">Kontakt</a></li>
             </ul>
           </nav>
         </div>
         <!-- Header-btn -->
         <div class="header-btns d-none d-lg-block f-right">
-          <a href="contact.html" class="btn">Kontaktiraj me</a>
+          <a routerLink="/contact" class="btn">Kontaktiraj me</a>
         </div>
         <!-- Mobile Menu -->
-        <div class="col-12">
-          <div class="mobile_menu d-block d-lg-none"></div>
+        <div class="col-12" (click)="onOpenMobileMenu()">
+          <div class="mobile_menu d-block d-lg-none">
+            <div class="slicknav_menu">
+              <a #outerMobileMenu aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;">
+                <span class="slicknav_menutxt">MENU</span>
+                <span class="slicknav_icon">
+                  <span class="slicknav_icon-bar"></span>
+                  <span class="slicknav_icon-bar"></span>
+                  <span class="slicknav_icon-bar"></span>
+                </span></a>
+              <ul #innerMobileMenu  id="mobileMenu" class="slicknav_nav sticknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+            <li><a routerLink="/landing" role="menuitem" tabindex="0">Početna</a></li>
+            <li><a routerLink="/about" role="menuitem" tabindex="0">O meni</a></li>
+            <li><a routerLink="/courses" role="menuitem" tabindex="0">Kursevi</a></li>
+            <li><a routerLink="/gallery" role="menuitem" tabindex="0">Galerija</a></li>
+            <li><a routerLink="/blog" role="menuitem" tabindex="0">Blog</a></li>
+              <li><a routerLink="/contact" role="menuitem" tabindex="0">Kontakt</a></li>
+          </ul></div></div>
         </div>
       </div>
     </div>

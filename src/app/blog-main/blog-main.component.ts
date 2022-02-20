@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {RouterHelperService} from '../../assets/service/router-helper.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-blog-main',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogMainComponent implements OnInit {
 
-  constructor() { }
+  title: string = 'Blog';
+  triggerLoader: boolean = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  public onPageReload(){
+    if (this.triggerLoader){this.triggerLoader = !this.triggerLoader}
+    this.triggerLoader = true;
+    this.router.navigate(['blog'])
+    window.scrollTo(0,0)
+
+    setTimeout(() => this.triggerLoader = !this.triggerLoader,1)
   }
 
 }

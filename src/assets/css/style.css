@@ -3390,7 +3390,7 @@ hr {
 
 /* line 31, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
 .slider-area2 {
-  background-image: url(../img/hero/hero2.png);
+  background-image: url(../img/hero/subwallpaper_igor.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3430,6 +3430,7 @@ hr {
     padding-top: 80px;
   }
 }
+
 
 @media (max-width: 575px) {
   /* line 44, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
@@ -3557,6 +3558,8 @@ hr {
     right: 63px;
   }
 }
+
+
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /* line 117, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
@@ -3894,7 +3897,6 @@ hr {
   font-size: 16px;
   line-height: 1.7;
   color: #fff;
-  text-transform: capitalize;
 }
 
 /* line 61, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_pricing.scss */
@@ -4348,18 +4350,20 @@ hr {
 /* line 19, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_gallery.scss */
 .gallery-area .box {
   position: relative;
+
 }
 
 /* line 22, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_gallery.scss */
 .gallery-area .box .gallery-img {
-  height: 565px;
+  height: 376px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 /* line 27, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_gallery.scss */
 .gallery-area .box .big-img {
-  height: 500px;
+  width: 486px;
+  height: 376px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -4465,6 +4469,7 @@ hr {
 
 /* line 94, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_gallery.scss */
 .gallery-area .box.snake {
+  width: 486px;
   position: relative;
   overflow: hidden;
 }
@@ -4489,7 +4494,7 @@ hr {
 .overlay {
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: 490px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   top: 0;
@@ -4510,6 +4515,13 @@ hr {
   -o-transition: 0.4s;
   transition: 0.4s;
   z-index: 1;
+}
+
+@media screen and (max-width: 600px){
+  .slider-area{
+    background-image: url(../img/wallpapper_mobile2.jpg);
+  }
+
 }
 
 /* line 9, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_team.scss */

@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryMainComponent implements OnInit {
 
+  title: string = 'Galerija';
+
+  dislayOverlay: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

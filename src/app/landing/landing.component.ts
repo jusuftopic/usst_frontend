@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RouterHelperService} from '../../assets/service/router-helper.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private routerHelper: RouterHelperService) { }
+
+  displayGalleryOverlay: boolean = true;
 
   ngOnInit(): void {
+  }
+
+  public onGroupCourseClick(){
+    const groupPath = 'courses/group';
+
+    this.routerHelper.navigate(groupPath, false);
+  }
+
+
+  public onIndividualCourseClick(){
+    const individualPath = 'courses/individual';
+
+    this.routerHelper.navigate(individualPath, false);
   }
 
 }
