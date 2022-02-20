@@ -3403,23 +3403,31 @@ hr {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   /* line 44, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
-
+  .slider-area .hero__caption {
+    padding-top: 80px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   /* line 44, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
-
+  .slider-area .hero__caption {
+    padding-top: 80px;
+  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /* line 44, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
-
+  .slider-area .hero__caption {
+    padding-top: 80px;
+  }
 }
 
 
 @media (max-width: 575px) {
   /* line 44, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
-
+  .slider-area .hero__caption {
+    padding-top: 80px;
+  }
 }
 
 /* line 58, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
