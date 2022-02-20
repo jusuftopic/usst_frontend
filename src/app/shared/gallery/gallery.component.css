@@ -68,23 +68,23 @@
 @media only screen and (min-width: 410px) and (max-width: 510px){
 
 #photo1,#photo2,#photo3,#photo4,#photo5{
-  width: 510px;
+  width: 450px;
   height: 300px;
 }
 
 .box.snake{
-    width: 510px;
-    height: 340px;
+    width: 450px;
+    height: 300px;
   }
 
   .gallery-area .box .overlay{
-    width: 510px;
+    width: 450px;
     height: 300px;
   }
 
 
   .gallery-area .box .big-img{
-    width: 510px;
+    width: 450px;
     height: 230px;
   }
 }
@@ -95,7 +95,7 @@
     height: 280px;
   }
   #photo5{
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   .gallery-area .box .overlay{
@@ -124,7 +124,7 @@
     height: 190px;
   }
   #photo5{
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   .gallery-area .box .overlay{
