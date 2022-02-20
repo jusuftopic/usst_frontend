@@ -1,0 +1,23 @@
+.overlay{
+  display: none;
+}
+
+#photo1:hover #overlay1{
+  display: block;
+}
+
+#photo2:hover #overlay2{
+  display: block;
+}
+#photo3:hover #overlay3{
+  display: block;
+}
+#photo4:hover #overlay4{
+  display: block;
+}
+#photo5:hover #overlay5{
+  display: block;
+}
+#photo6:hover #overlay6{
+  display: block;
+}
