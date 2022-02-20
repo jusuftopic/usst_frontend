@@ -6,6 +6,13 @@
 
 @media only screen and (min-width: 390px) and (max-width: 700px){
 
+  .slider-area{
+    width: 390px;
+  }
+
+  .slider-area .hero__caption{
+    width: 390px;
+  }
 
   .hero__caption h1{
     display: none;
@@ -22,7 +29,11 @@
 
 
   .slider-area{
-    word-wrap: unrestricted;
+    width: 300px;
+  }
+
+  .slider-area .hero__caption{
+    width: 300px;
   }
 
   .hero__caption h1{
@@ -38,6 +49,13 @@
 
 @media only screen and (max-width: 330px) {
 
+  .slider-area{
+    width: 330px;
+  }
+
+  .slider-area .hero__caption{
+    width: 330px;
+  }
   .hero__caption h1{
     display: none;
   }
