@@ -68,23 +68,23 @@
 @media only screen and (min-width: 410px) and (max-width: 510px){
 
 #photo1,#photo2,#photo3,#photo4,#photo5{
-  width: 400px;
+  width: 380px;
   height: 300px;
 }
 
 .box.snake{
-    width: 400px;
+    width: 380px;
     height: 300px;
   }
 
   .gallery-area .box .overlay{
-    width: 400px;
+    width: 380px;
     height: 300px;
   }
 
 
   .gallery-area .box .big-img{
-    width: 400px;
+    width: 380px;
     height: 230px;
   }
 }
