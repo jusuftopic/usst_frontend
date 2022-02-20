@@ -208,7 +208,6 @@ h6 {
   margin-top: 0px;
   font-style: normal;
   font-weight: 500;
-  text-transform: normal;
 }
 
 /* line 23, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
@@ -222,19 +221,11 @@ p {
 }
 
 /* line 34, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
-.bg-img-1 {
-  background-image: url(../img/slider/slider-img-1.jpg);
-}
+
 
 /* line 37, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
-.bg-img-2 {
-  background-image: url(../img/background-img/bg-img-2.jpg);
-}
 
 /* line 40, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
-.cta-bg-1 {
-  background-image: url(../img/background-img/bg-img-3.jpg);
-}
 
 /* line 45, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
 .img {
@@ -6327,19 +6318,12 @@ hr {
 }
 
 /* line 1, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_bradcam.scss */
-.breadcam_bg {
-  background-image: url(../img/banner/bradcam.png);
-}
+
 
 /* line 4, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_bradcam.scss */
-.breadcam_bg_1 {
-  background-image: url(../img/banner/bradcam2.png);
-}
 
-/* line 7, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_bradcam.scss */
-.breadcam_bg_2 {
-  background-image: url(../img/banner/bradcam3.png);
-}
+
+
 
 /* line 10, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_bradcam.scss */
 .bradcam_area {
@@ -6747,7 +6731,7 @@ del {
 
 /* line 156, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_elements.scss */
 .genric-btn.arrow {
-  display: -webkit-inline-box;
+
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
