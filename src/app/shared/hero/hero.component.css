@@ -7,12 +7,12 @@
 @media only screen and (min-width: 390px) and (max-width: 430px){
 
   .slider-area{
-    width: 430px;
+
     background-size: 100%;
   }
 
   .slider-area .hero__caption{
-    width: 430px;
+
   }
 
   .hero__caption h1{
@@ -29,12 +29,12 @@
 
 
   .slider-area{
-    width: 399px;
+
     background-size: 100%;
   }
 
   .slider-area .hero__caption{
-    width: 399px;
+
   }
 
   .hero__caption h1{
@@ -51,7 +51,7 @@
 @media only screen and (max-width: 330px) {
 
   .slider-area{
-    width: 330px;
+
     background-size: 100%;
   }
 
