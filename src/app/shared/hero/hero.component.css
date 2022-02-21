@@ -22,6 +22,7 @@
   .hero__caption span{
     font-size: 35px;
     margin-left: 30px;
+    display: none;
   }
 }
 
@@ -43,7 +44,7 @@
 
   .hero__caption span{
     font-size: 22px;
-
+    display: none;
   }
 }
 
@@ -63,5 +64,6 @@
   }
   .hero__caption span{
     font-size: 25px;
+    display: none;
   }
 }
