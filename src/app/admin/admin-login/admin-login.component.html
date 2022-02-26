@@ -1,0 +1,21 @@
+<app-preloader></app-preloader>
+<app-hero-sub [title]="title"></app-hero-sub>
+<div class="form-wrapper">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="wrap">
+      <div class="form-section">
+        <h2>Login</h2>
+      </div>
+      <div class="e-float-input">
+        <input ype="text" formControlName="username">
+        <span class="e-float-line"></span>
+        <label class="e-float-text">Username</label>
+      </div>
+      <div class="e-float-input">
+        <input type="password" formControlName="password">
+        <span class="e-float-line"></span>
+        <label class="e-float-text">Password</label>
+      </div>
+    </div>
+  </form>
+</div>

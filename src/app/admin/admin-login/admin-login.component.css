@@ -1,0 +1,24 @@
+.form-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+form{
+  width: 350px;
+  height: 400px;
+  border-radius: 25px;
+  border: 1px solid white;
+  padding: 20px;
+}
+
+form *{
+  color: white;
+}
+
+.form-section, .e-float-input{
+  margin-bottom: 30px;
+}
+
+.e-float-text{
+  color: white;
+}

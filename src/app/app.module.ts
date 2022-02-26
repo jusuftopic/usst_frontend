@@ -10,6 +10,7 @@ import {SharedModule} from './shared/shared.module';
 import {PrivacyPolicyComponent} from './privacy-policy/privacy-policy.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
