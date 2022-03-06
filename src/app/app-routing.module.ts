@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: 'gallery', loadChildren: () => import('./gallery-main/gallery-main.module').then(m => m.GalleryMainModule)},
   {path: 'blog', loadChildren: () => import('./blog-main/blog-main.module').then(m => m.BLogMainModule)},
   {path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)},
-  {path: 'admin/login', loadChildren:() => import('./admin/admin.module').then(m => m.AdminModule)}
+  {path: 'admin', loadChildren:() => import('./admin/admin.module').then(m => m.AdminModule)}
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {LoginModel} from '../../../api/model/loginDto.model';
+import {AuthService} from '../../../api/firebase/service/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -9,32 +10,53 @@ import {LoginModel} from '../../../api/model/loginDto.model';
 })
 export class AdminLoginComponent implements OnInit {
 
-  title: string = "Login";
+  title: string = 'Login';
+
+  disabledBtn: boolean = true;
+  signUpFailed: boolean = false;
+  triggerLoader: boolean = false;
 
   loginForm: FormGroup = new FormGroup({
-    username: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required])
   })
 
-  constructor() { }
+  constructor(private authService: AuthService,
+              private router: Router) {
+  }
 
   ngOnInit(): void {
   }
 
-  public onSubmit(){
-    if (this.loginForm.valid){
-      const login = this.generateLoginModel();
+  public onSubmit() {
+    if (this.loginForm.valid) {
+      const email = this.loginForm.controls.email.value;
+      const password = this.loginForm.controls.password.value;
 
-
-
+      this.authService.signUp(email, password)
+        .then((user) => {
+          if (user.user?.uid) {
+            this.loginForm.reset();
+            this.router.navigate(['admin/dashboard']);
+          }
+        })
+        .catch(() => {
+          this.triggerLoader = true;
+          this.loginForm.reset();
+          this.signUpFailed = true;
+        });
 
     }
   }
 
-  private generateLoginModel(){
-    return{
-      username: this.loginForm.controls.username.value,
-      password: this.loginForm.controls.password.value
-    } as LoginModel
+  public onInputKeyUp() {
+    this.signUpFailed = false;
+    if (this.loginForm.valid) {
+      this.disabledBtn = false;
+    } else {
+      this.disabledBtn = true;
+    }
   }
+
+
 }

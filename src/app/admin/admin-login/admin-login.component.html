@@ -1,4 +1,4 @@
-<app-preloader></app-preloader>
+<app-preloader [triggerLoaderAgain]="triggerLoader"></app-preloader>
 <app-hero-sub [title]="title"></app-hero-sub>
 <div class="form-wrapper">
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -6,15 +6,32 @@
       <div class="form-section">
         <h2>Login</h2>
       </div>
-      <div class="e-float-input">
-        <input ype="text" formControlName="username">
+      <div [ngClass]="{'no-errors': !loginForm.controls.email.touched || !this.loginForm.controls.email.errors}" class="e-float-input">
+        <input type="email" formControlName="email" (keyup)="onInputKeyUp()">
         <span class="e-float-line"></span>
-        <label class="e-float-text">Username</label>
+        <label class="e-float-text">Email</label>
       </div>
-      <div class="e-float-input">
-        <input type="password" formControlName="password">
+      <div class="error-message" *ngIf="loginForm.controls.email.errors && loginForm.controls.email.touched">
+        <div *ngIf="loginForm.controls.email.errors.required" class="e-error">
+          Unesi email
+        </div>
+
+      </div>
+      <div [ngClass]="{'no-errors': !loginForm.controls.password.touched || !this.loginForm.controls.email.errors}" class="e-float-input">
+        <input type="password" formControlName="password" (keyup)="onInputKeyUp()">
         <span class="e-float-line"></span>
         <label class="e-float-text">Password</label>
+      </div>
+      <div class="error-message" *ngIf="loginForm.controls.password.errors && loginForm.controls.password.touched">
+        <div *ngIf="loginForm.controls.password.errors.required" class="e-error">
+          Unesi lozinku
+        </div>
+      </div>
+      <div id="firebase-error" *ngIf="signUpFailed" class="e-error">
+        Korisnik nije pronadjen
+      </div>
+      <div class="button-section">
+        <button [disabled]="disabledBtn" [ngClass]="{'disable': disabledBtn}"  type="submit" class="btn-info">LogIn</button>
       </div>
     </div>
   </form>
