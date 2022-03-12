@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Course} from '../../../api/firebase/model/course.model';
+import {CourseService} from '../../../api/firebase/service/course/course.service';
 
 @Component({
   selector: 'app-courses-individual',
@@ -8,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class CoursesIndividualComponent implements OnInit {
 
   title: string = "Kursevi";
+  groupCourses: Course[] = [];
 
-  constructor() { }
+  constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
+   this.courseService.getIndividualCourses().subscribe(courses => {
+     if(courses){
+       this.groupCourses = courses;
+     }
+   })
   }
 
 }

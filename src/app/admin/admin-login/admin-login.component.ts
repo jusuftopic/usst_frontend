@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {AuthService} from '../../../api/firebase/service/auth.service';
+import {AuthService} from '../../../api/firebase/service/auth/auth.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -26,6 +26,11 @@ export class AdminLoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.authService.checkAdminAuthStatus().then(user => {
+      if (user){
+        this.router.navigate(['admin/dashboard'])
+      }
+    })
   }
 
   public onSubmit() {
@@ -37,7 +42,11 @@ export class AdminLoginComponent implements OnInit {
         .then((user) => {
           if (user.user?.uid) {
             this.loginForm.reset();
-            this.router.navigate(['admin/dashboard']);
+            this.router.navigate(['admin/dashboard'],{
+              queryParams: {
+                id: user.user.uid
+              }
+            });
           }
         })
         .catch(() => {

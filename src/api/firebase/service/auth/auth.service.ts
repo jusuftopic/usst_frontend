@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat';
 import {AngularFirestore} from '@angular/fire/compat/firestore';
-import {AppConstants} from '../../../app/app.constants';
-import {Admin} from '../model/admin.model';
+import {AppConstants} from '../../../../app/app.constants';
+import {Admin} from '../../model/admin.model';
 import {child, get, getDatabase, ref} from 'firebase/database';
 import {getAuth, onAuthStateChanged, signOut} from 'firebase/auth';
 import UserInfo = firebase.UserInfo;
@@ -14,7 +14,7 @@ import UserInfo = firebase.UserInfo;
 export class AuthService {
   private path = AppConstants.FIREBASE_ADMIN;
 
-  private daInstance = getDatabase();
+  private dbInstance = getDatabase();
   private auth = getAuth();
 
   constructor(private firebaseAuth: AngularFireAuth,
@@ -30,7 +30,7 @@ export class AuthService {
   }
 
   public getAdminById(id: string): Promise<Admin> {
-    const dbRef = ref(this.daInstance);
+    const dbRef = ref(this.dbInstance);
     return get(child(dbRef, this.path + '/' + id)).then(snapshot => {
       if (snapshot.exists()) {
         return snapshot.val();
