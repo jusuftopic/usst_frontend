@@ -10,14 +10,14 @@ import {CourseService} from '../../../api/firebase/service/course/course.service
 export class CoursesIndividualComponent implements OnInit {
 
   title: string = "Kursevi";
-  groupCourses: Course[] = [];
+  individualCourses: Course[] = [];
 
   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
    this.courseService.getIndividualCourses().subscribe(courses => {
      if(courses){
-       this.groupCourses = courses;
+       this.individualCourses = courses;
      }
    })
   }

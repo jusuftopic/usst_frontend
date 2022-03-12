@@ -17,7 +17,13 @@ export class CoursesGroupComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.courseService.getGroupCourses().subscribe(courses => {
+      if (courses) {
+        this.coursesGroup = courses;
 
+        console.log(this.coursesGroup)
+      }
+    })
   }
 
 }

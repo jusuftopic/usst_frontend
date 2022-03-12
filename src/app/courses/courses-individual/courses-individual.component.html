@@ -9,15 +9,15 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-6">
+    <div *ngIf="individualCourses" class="row">
+      <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let course of individualCourses">
         <div class="properties mb-30">
           <div class="properties__card">
             <div class="about-icon">
               <img src="assets/img/icon/price.svg" alt="">
             </div>
             <div class="properties__caption">
-              <span class="month">Sport performanse</span>
+              <span class="month">{{course.name}}</span>
               <div class="single-features">
                 <div class="features-icon">
                   <img src="assets/img/icon/check.svg" alt="">
@@ -39,7 +39,7 @@
                   <img src="assets/img/icon/check.svg" alt="">
                 </div>
                 <div class="features-caption">
-                  <p>Za amatere i profesionalce</p>
+                  <p>{{course.intendedFor}}</p>
                 </div>
               </div>
               <div class="single-features mb-20">
@@ -47,7 +47,7 @@
                   <img src="assets/img/icon/check.svg" alt="">
                 </div>
                 <div class="features-caption">
-                  <p>Plaćanje po mjesec</p>
+                  <p>{{course.purpose}}</p>
                 </div>
               </div>
             </div>
