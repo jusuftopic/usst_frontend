@@ -10,22 +10,24 @@ import { ServiceSharedComponent } from './service-shared/service-shared.componen
 import {AboutComponent} from './about/about.component';
 import { HeroSubComponent } from './hero-sub/hero-sub.component';
 import {RouterModule} from '@angular/router';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 
 
 @NgModule({
-  declarations: [PreloaderComponent, HeroComponent, TrainingCategoryComponent, OfferComponent, GalleryComponent, AboutComponent, BlogSharedComponent, ServiceSharedComponent, HeroSubComponent],
-  exports: [
-    PreloaderComponent,
-    HeroComponent,
-    TrainingCategoryComponent,
-    OfferComponent,
-    GalleryComponent,
-    AboutComponent,
-    BlogSharedComponent,
-    ServiceSharedComponent,
-    HeroSubComponent
-  ],
+  declarations: [PreloaderComponent, HeroComponent, TrainingCategoryComponent, OfferComponent, GalleryComponent, AboutComponent, BlogSharedComponent, ServiceSharedComponent, HeroSubComponent, CourseCardComponent],
+    exports: [
+        PreloaderComponent,
+        HeroComponent,
+        TrainingCategoryComponent,
+        OfferComponent,
+        GalleryComponent,
+        AboutComponent,
+        BlogSharedComponent,
+        ServiceSharedComponent,
+        HeroSubComponent,
+        CourseCardComponent
+    ],
     imports: [
         CommonModule,
         RouterModule

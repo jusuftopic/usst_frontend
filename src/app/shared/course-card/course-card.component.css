@@ -1,0 +1,15 @@
+#freeTrail-section{
+  margin-top: 10px;
+}
+
+.about-icon{
+  margin-bottom: 10px;
+}
+
+.properties__card{
+  border-radius: 25px;
+}
+
+.properties__card:hover{
+  transform: scale(1.1);
+}
