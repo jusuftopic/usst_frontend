@@ -48,7 +48,7 @@ export class AdminDashboardComponent implements OnInit {
 
   public onLogOut() {
     this.authService.signOutCurrentAdmin().then(() => {
-      this.router.navigate(['admin/login']);
+      this.router.navigate(['admin']);
     }).catch(() => {
       this.logOutError = 'Failed to logout current admin';
     })

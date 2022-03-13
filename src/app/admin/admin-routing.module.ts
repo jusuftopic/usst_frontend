@@ -6,7 +6,7 @@ import {AdminPermission} from '../../assets/permission/adminPermission';
 
 
 const routes: Routes = [
-  {path: 'login', component: AdminLoginComponent},
+  {path: '', component: AdminLoginComponent},
   {path: 'dashboard', component: AdminDashboardComponent, canActivate: [AdminPermission]}
 ];
 
