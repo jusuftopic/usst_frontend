@@ -13,3 +13,240 @@
 .properties__card:hover{
   transform: scale(1.1);
 }
+
+@media screen and (min-width:360px) and (max-width: 390px) {
+  .properties__caption{
+    margin-top: -10px;
+  }
+
+  #freeTrailSection{
+    margin-top: 30px;
+  }
+
+  .properties__caption span.month {
+    font-size: 27px;
+  }
+
+  .properties__caption .features-caption p{
+    font-size: 16px;
+  }
+
+  .properties__caption .features-icon {
+    width: 15px;
+    height: 11px;
+  }
+
+  .properties__caption .features-icon img{
+  width: 15px;
+  height: 11px;
+  }
+
+
+}
+
+@media screen and (min-width:340px) and (max-width: 360px) {
+  .properties__caption{
+    margin-top: -10px;
+  }
+
+  #freeTrailSection{
+    margin-top: 30px;
+  }
+
+
+  .properties__caption span.month {
+    font-size: 25px;
+  }
+
+  .properties__caption .features-caption p{
+    font-size: 16px;
+  }
+
+  .properties__caption .features-icon {
+    width: 14px;
+    height: 10px;
+  }
+
+  .properties__caption .features-icon img{
+  width: 14px;
+  height: 10px;
+  }
+
+  .properties__caption .features-caption{
+    margin-left: -3px;
+  }
+
+}
+
+@media screen and (min-width:320px) and (max-width: 340px) {
+  .properties__caption{
+    margin-top: -10px;
+  }
+
+  #freeTrailSection{
+    margin-top: 30px;
+  }
+
+  .properties__caption span.month {
+    font-size: 23px;
+  }
+
+  .properties__caption .features-caption p{
+    font-size: 15px;
+  }
+
+  .properties__caption .features-caption{
+    margin-left: -6px;
+  }
+
+  .properties__caption .features-icon {
+    width: 13px;
+    height: 9px;
+  }
+
+  .properties__caption .features-icon img{
+  width: 13px;
+  height: 9px;
+  }
+
+}
+
+@media screen and (min-width:300px) and (max-width: 320px) {
+  .properties__caption{
+    margin-top: -10px;
+  }
+  
+  #freeTrailSection{
+    margin-top: 30px;
+  }
+
+  .properties__caption span.month {
+    font-size: 21px;
+  }
+
+  .properties__caption .features-caption p{
+    font-size: 14px;
+  }
+
+  .properties__caption .features-caption{
+    margin-left: -9px;
+  }
+
+
+  .properties__caption .features-icon {
+    width: 12px;
+    height: 7px;
+  }
+
+  .properties__caption .features-icon img{
+  width: 12px;
+  height: 7px;
+  }
+
+}
+
+
+@media screen and (min-width:280px) and (max-width: 300px) {
+  .properties__caption{
+    margin-top: -10px;
+  }
+  
+  #freeTrailSection{
+    margin-top: 30px;
+  }
+
+  .properties__caption span.month {
+    font-size: 19px;
+  }
+
+  .properties__caption .features-caption p{
+    font-size: 13px;
+  }
+
+  .properties__caption .features-caption{
+    margin-left: -12px;
+  }
+
+  .properties__caption .features-icon {
+    width: 11px;
+    height: 6px;
+  }
+
+  .properties__caption .features-icon img{
+  width: 11px;
+  height: 6px;
+  }
+
+}
+
+
+@media screen and (min-width:260px) and (max-width: 280px) {
+  .properties__caption{
+    margin-top: -10px;
+  }
+  
+  #freeTrailSection{
+    margin-top: 30px;
+  }
+
+  .properties__caption span.month {
+    font-size: 17px;
+  }
+
+  .properties__caption .features-caption p{
+    font-size: 12px;
+  }
+
+  .properties__caption .features-caption{
+    margin-left: -10px;
+  }
+
+
+  .properties__caption .features-icon {
+    width: 10px;
+    height: 6px;
+  }
+
+  .properties__caption .features-icon img{
+  width: 10px;
+  height: 6px;
+  }
+
+
+}
+
+@media screen and (min-width:240px) and (max-width: 260px) {
+  .properties__caption{
+    margin-top: -10px;
+  }
+
+  
+  #freeTrailSection{
+    margin-top: 30px;
+  }
+
+  .properties__caption span.month {
+    font-size: 15px;
+  }
+
+  .properties__caption .features-caption p{
+    font-size: 11px;
+  }
+
+  .properties__caption .features-caption{
+    margin-left: -11px;
+  }
+
+
+  .properties__caption .features-icon {
+    width: 9px;
+    height: 4px;
+  }
+
+  .properties__caption .features-icon img{
+  width: 9px;
+  height: 4px;
+  }
+
+  
+}
