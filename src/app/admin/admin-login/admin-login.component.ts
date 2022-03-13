@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../../api/firebase/service/auth/auth.service';
 import {Router} from '@angular/router';
+import { AppCheck } from '@angular/fire/app-check';
+import { AppConstants } from 'src/app/app.constants';
 
 @Component({
   selector: 'app-admin-login',
@@ -42,11 +44,8 @@ export class AdminLoginComponent implements OnInit {
         .then((user) => {
           if (user.user?.uid) {
             this.loginForm.reset();
-            this.router.navigate(['admin/dashboard'],{
-              queryParams: {
-                id: user.user.uid
-              }
-            });
+            localStorage.setItem(AppConstants.LOCAL_STORAGE_UID, user.user.uid)
+            this.router.navigate(['admin/dashboard']);
           }
         })
         .catch(() => {

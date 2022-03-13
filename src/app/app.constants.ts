@@ -1,5 +1,7 @@
 export class AppConstants{
-
+  /* local storage */
+  public static readonly LOCAL_STORAGE_UID = "uid"; 
+  
   /* firebase endpoints */
   public static readonly FIREBASE_ADMIN = "admin";
   public static readonly FIREBASE_COURSES = "courses";
