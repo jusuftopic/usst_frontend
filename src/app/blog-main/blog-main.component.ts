@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RouterHelperService} from '../../assets/service/router-helper.service';
 import {Router} from '@angular/router';
+import {AppConstants} from '../app.constants';
 
 @Component({
   selector: 'app-blog-main',
@@ -20,7 +21,7 @@ export class BlogMainComponent implements OnInit {
   public onPageReload(){
     if (this.triggerLoader){this.triggerLoader = !this.triggerLoader}
     this.triggerLoader = true;
-    this.router.navigate(['blog'])
+    this.router.navigate([AppConstants.PATH_BLOG])
     window.scrollTo(0,0)
 
     setTimeout(() => this.triggerLoader = !this.triggerLoader,1)

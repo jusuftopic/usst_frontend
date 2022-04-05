@@ -4,6 +4,7 @@ import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {PrivacyPolicyComponent} from '../privacy-policy/privacy-policy.component';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
+import {AppConstants} from '../app.constants';
 
 @Component({
   selector: 'app-contact',
@@ -43,7 +44,7 @@ export class ContactComponent implements OnInit {
     }, {'headers': headers}).subscribe(() => {
       this.contactForm.reset();
       this.triggerLoader = true;
-      this.router.navigate(['contact'])
+      this.router.navigate([AppConstants.PATH_CONTACT])
       window.scrollTo(0, 0)
     })
 

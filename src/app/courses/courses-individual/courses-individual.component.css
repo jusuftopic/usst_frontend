@@ -1,0 +1,7 @@
+.properties__card{
+  border-radius: 10%;
+}
+
+.properties__card:hover{
+  transform: scale(1.1);
+}

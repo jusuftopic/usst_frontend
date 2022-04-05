@@ -1,13 +1,26 @@
 export class AppConstants{
   /* local storage */
-  public static readonly LOCAL_STORAGE_UID = "uid"; 
-  
-  /* firebase endpoints */
-  public static readonly FIREBASE_ADMIN = "admin";
-  public static readonly FIREBASE_COURSES = "courses";
+  public static readonly LOCAL_STORAGE_UID = "uid";
 
-  /* courses DB */
-  public static readonly COURSE_CHILD_TYPE = 'type';
-  public static readonly COURSE_INDIVIDUAL = 'Individual';
-  public static readonly COURSE_GROUP = 'Group';
+
+
+  /* paths */
+   /* about */
+  public static readonly PATH_ABOUT = 'about';
+
+  /* courses */
+  public static readonly PATH_COURSES = 'courses';
+  public static readonly PATH_COURSES_INDIVIDUAL = 'individual';
+  public static readonly PATH_COURSES_GROUP = 'group';
+
+  /* gallery */
+  public static readonly PATH_GALLERY = 'gallery';
+
+   /* blog */
+  public static readonly PATH_BLOG = 'blog';
+
+   /* contact */
+  public static readonly PATH_CONTACT = 'contact';
+
+
 }

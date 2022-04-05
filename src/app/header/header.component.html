@@ -11,7 +11,7 @@
           <nav>
             <ul id="navigation">
               <li><a routerLink="/">Početna</a></li>
-              <li><a routerLink="/about" >O meni</a></li>
+              <li><a routerLink="/about">O meni</a></li>
               <li><a routerLink="/courses">Kursevi</a></li>
               <li><a routerLink="/gallery">Galerija</a></li>
               <li><a routerLink="/blog">Blog</a></li>
@@ -27,21 +27,25 @@
         <div class="col-12" (click)="onOpenMobileMenu()">
           <div class="mobile_menu d-block d-lg-none">
             <div class="slicknav_menu">
-              <a #outerMobileMenu aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;">
+              <a #outerMobileMenu aria-haspopup="true" role="button" tabindex="0"
+                 class="slicknav_btn slicknav_collapsed" style="outline: none;">
                 <span class="slicknav_menutxt">MENU</span>
                 <span class="slicknav_icon">
                   <span class="slicknav_icon-bar"></span>
                   <span class="slicknav_icon-bar"></span>
                   <span class="slicknav_icon-bar"></span>
                 </span></a>
-              <ul #innerMobileMenu  id="mobileMenu" class="slicknav_nav sticknav_hidden" aria-hidden="true" role="menu" style="display: none;">
-            <li><a routerLink="/" role="menuitem" tabindex="0">Početna</a></li>
-            <li><a routerLink="/about" role="menuitem" tabindex="0">O meni</a></li>
-            <li><a routerLink="/courses" role="menuitem" tabindex="0">Kursevi</a></li>
-            <li><a routerLink="/gallery" role="menuitem" tabindex="0">Galerija</a></li>
-            <li><a routerLink="/blog" role="menuitem" tabindex="0">Blog</a></li>
-              <li><a routerLink="/contact" role="menuitem" tabindex="0">Kontakt</a></li>
-          </ul></div></div>
+              <ul #innerMobileMenu id="mobileMenu" class="slicknav_nav sticknav_hidden" aria-hidden="true" role="menu"
+                  style="display: none;">
+                <li><a routerLink="/" role="menuitem" tabindex="0">Početna</a></li>
+                <li><a routerLink="/about" role="menuitem" tabindex="0">O meni</a></li>
+                <li><a routerLink="/courses" role="menuitem" tabindex="0">Kursevi</a></li>
+                <li><a routerLink="/gallery" role="menuitem" tabindex="0">Galerija</a></li>
+                <li><a routerLink="/blog" role="menuitem" tabindex="0">Blog</a></li>
+                <li><a routerLink="/contact" role="menuitem" tabindex="0">Kontakt</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

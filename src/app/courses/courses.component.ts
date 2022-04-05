@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterHelperService} from '../../assets/service/router-helper.service';
+import {AppConstants} from '../app.constants';
 
 @Component({
   selector: 'app-courses',
@@ -10,8 +11,6 @@ export class CoursesComponent implements OnInit {
   title: string = 'Kursevi'
   triggerLoader: boolean = false;
 
-  coursePath = 'courses/';
-
   constructor(private routerHelper: RouterHelperService) {
   }
 
@@ -19,13 +18,13 @@ export class CoursesComponent implements OnInit {
   }
 
   public individualClick() {
-    const individualPath = this.coursePath + 'individual';
+    const individualPath = AppConstants.PATH_COURSES + '/' + AppConstants.PATH_COURSES_INDIVIDUAL;
     this.routerHelper.navigate(individualPath, this.triggerLoader);
   }
 
 
   public groupClick() {
-    const groupPath = this.coursePath + 'group';
+    const groupPath = AppConstants.PATH_COURSES + '/' + AppConstants.PATH_COURSES_GROUP;
     this.routerHelper.navigate(groupPath, this.triggerLoader);
   }
 

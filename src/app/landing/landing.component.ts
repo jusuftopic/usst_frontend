@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RouterHelperService} from '../../assets/service/router-helper.service';
+import {AppConstants} from '../app.constants';
 
 @Component({
   selector: 'app-landing',
@@ -16,14 +17,14 @@ export class LandingComponent implements OnInit {
   }
 
   public onGroupCourseClick(){
-    const groupPath = 'courses/group';
+    const groupPath = AppConstants.PATH_COURSES + '/' + AppConstants.PATH_COURSES_GROUP;
 
     this.routerHelper.navigate(groupPath, false);
   }
 
 
   public onIndividualCourseClick(){
-    const individualPath = 'courses/individual';
+    const individualPath =AppConstants.PATH_COURSES + '/' + AppConstants.PATH_COURSES_INDIVIDUAL;
 
     this.routerHelper.navigate(individualPath, false);
   }

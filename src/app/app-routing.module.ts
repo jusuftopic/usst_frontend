@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {AppConstants} from './app.constants';
 
 const routes: Routes = [
   {path: '', loadChildren: () => import('./landing/landing.module').then(m => m.LandingModule)},
-  {path: 'about', loadChildren: () => import('./about-main/about-main.module').then(m => m.AboutMainModule)},
-  {path: 'courses', loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule)},
-  {path: 'gallery', loadChildren: () => import('./gallery-main/gallery-main.module').then(m => m.GalleryMainModule)},
-  {path: 'blog', loadChildren: () => import('./blog-main/blog-main.module').then(m => m.BLogMainModule)},
-  {path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)},
-  {path: 'admin', loadChildren:() => import('./admin/admin.module').then(m => m.AdminModule)}
+  {path: AppConstants.PATH_ABOUT, loadChildren: () => import('./about-main/about-main.module').then(m => m.AboutMainModule)},
+  {path: AppConstants.PATH_COURSES, loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule)},
+  {path: AppConstants.PATH_GALLERY, loadChildren: () => import('./gallery-main/gallery-main.module').then(m => m.GalleryMainModule)},
+  {path: AppConstants.PATH_BLOG, loadChildren: () => import('./blog-main/blog-main.module').then(m => m.BLogMainModule)},
+  {path: AppConstants.PATH_CONTACT, loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)},
 ];
 
 @NgModule({

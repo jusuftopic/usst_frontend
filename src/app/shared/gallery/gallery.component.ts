@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {AppConstants} from '../../app.constants';
 
 @Component({
   selector: 'app-gallery',
@@ -16,8 +17,7 @@ export class GalleryComponent implements OnInit {
   }
 
   public onGalleryClick(){
-    this.router.navigate(['gallery'])
-    console.log("Gallery")
+    this.router.navigate([AppConstants.PATH_GALLERY])
   }
 
 }

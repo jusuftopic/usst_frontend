@@ -5,16 +5,27 @@ import {CoursesRoutingModule} from './courses-routing.module';
 import {SharedModule} from '../shared/shared.module';
 import { CoursesIndividualComponent } from './courses-individual/courses-individual.component';
 import { CoursesGroupComponent } from './courses-group/courses-group.component';
-import {CoursesDetailComponent} from './courses-detail/courses-detail.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatOptionModule} from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [CoursesComponent, CoursesIndividualComponent, CoursesGroupComponent, CoursesDetailComponent],
+  declarations: [CoursesComponent,CoursesIndividualComponent, CoursesGroupComponent],
   imports: [
     CommonModule,
     CoursesRoutingModule,
-    SharedModule
+    SharedModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    ReactiveFormsModule
   ]
 })
 export class CoursesModule { }
