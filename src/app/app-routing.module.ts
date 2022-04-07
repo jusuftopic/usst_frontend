@@ -9,6 +9,7 @@ const routes: Routes = [
   {path: AppConstants.PATH_GALLERY, loadChildren: () => import('./gallery-main/gallery-main.module').then(m => m.GalleryMainModule)},
   {path: AppConstants.PATH_BLOG, loadChildren: () => import('./blog-main/blog-main.module').then(m => m.BLogMainModule)},
   {path: AppConstants.PATH_CONTACT, loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)},
+  {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({
