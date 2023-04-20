@@ -1,0 +1,31 @@
+<app-preloader [triggerLoaderAgain]="false"></app-preloader>
+<app-hero-sub [title]="title"></app-hero-sub>
+<section class="pricing-area section-padding30 fix">
+  <div class="container">
+    <app-title [title]="title"></app-title>
+    <div class="row">
+      <div *ngFor="let schedule of schedulesIndividual" class="col-lg-4 col-md-6 col-sm-6">
+        <div class="properties mb-30">
+          <div class="properties__card">
+            <div class="about-icon">
+              <img src="assets/img/icon/price.svg" alt="">
+            </div>
+            <div class="properties__caption">
+              <span class="month">{{schedule.title}}</span>
+              <div class="single-features first-row">
+                <div class="features-caption">
+                  <p>Dani: {{schedule.days?.join(', ')}}</p>
+                </div>
+              </div>
+              <div class="single-features">
+                <div class="features-caption">
+                  <p>Vrijeme: {{schedule.time}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

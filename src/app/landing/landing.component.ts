@@ -11,22 +11,19 @@ export class LandingComponent implements OnInit {
 
   constructor(private routerHelper: RouterHelperService) { }
 
-  displayGalleryOverlay: boolean = true;
-
   ngOnInit(): void {
   }
 
   public onGroupCourseClick(){
     const groupPath = AppConstants.PATH_COURSES + '/' + AppConstants.PATH_COURSES_GROUP;
 
-    this.routerHelper.navigate(groupPath, false);
+    this.routerHelper.navigate(groupPath);
   }
 
 
   public onIndividualCourseClick(){
     const individualPath =AppConstants.PATH_COURSES + '/' + AppConstants.PATH_COURSES_INDIVIDUAL;
-
-    this.routerHelper.navigate(individualPath, false);
+    this.routerHelper.navigate(individualPath);
   }
 
 }

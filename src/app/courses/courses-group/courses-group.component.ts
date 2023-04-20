@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-courses-group',
@@ -9,13 +9,6 @@ export class CoursesGroupComponent  {
 
   title: string = 'Kursevi';
   path: string = 'group';
-
-   triggerLoaderAgain = false
-
-  constructor() {}
-
-
-
 
 
 }

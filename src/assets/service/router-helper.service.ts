@@ -8,9 +8,7 @@ export class RouterHelperService {
 
   constructor(private router: Router) { }
 
-  public navigate(path: string, triggerPreloader: boolean){
-    if (triggerPreloader){triggerPreloader = !triggerPreloader}
-    triggerPreloader = true;
+  public navigate(path: string){
     this.router.navigate([path])
     window.scrollTo(0,0)
   }

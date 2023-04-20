@@ -12,10 +12,11 @@ import {HeroSubComponent} from './hero-sub/hero-sub.component';
 import {RouterModule} from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
 import {StopPropagationDirective} from '../../assets/directive/stop-propagation.directive';
+import { TitleComponent } from './title/title.component';
 
 
 @NgModule({
-  declarations: [PreloaderComponent, HeroComponent, TrainingCategoryComponent, OfferComponent, GalleryComponent, AboutComponent, BlogSharedComponent, ServiceSharedComponent, HeroSubComponent, StopPropagationDirective],
+  declarations: [PreloaderComponent, HeroComponent, TrainingCategoryComponent, OfferComponent, GalleryComponent, AboutComponent, BlogSharedComponent, ServiceSharedComponent, HeroSubComponent, StopPropagationDirective, TitleComponent],
   exports: [
     PreloaderComponent,
     HeroComponent,
@@ -26,6 +27,7 @@ import {StopPropagationDirective} from '../../assets/directive/stop-propagation.
     BlogSharedComponent,
     ServiceSharedComponent,
     HeroSubComponent,
+    TitleComponent
   ],
   imports: [
     CommonModule,

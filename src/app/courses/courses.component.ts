@@ -9,7 +9,6 @@ import {AppConstants} from '../app.constants';
 })
 export class CoursesComponent implements OnInit {
   title: string = 'Kursevi'
-  triggerLoader: boolean = false;
 
   constructor(private routerHelper: RouterHelperService) {
   }
@@ -19,13 +18,13 @@ export class CoursesComponent implements OnInit {
 
   public individualClick() {
     const individualPath = AppConstants.PATH_COURSES + '/' + AppConstants.PATH_COURSES_INDIVIDUAL;
-    this.routerHelper.navigate(individualPath, this.triggerLoader);
+    this.routerHelper.navigate(individualPath);
   }
 
 
   public groupClick() {
     const groupPath = AppConstants.PATH_COURSES + '/' + AppConstants.PATH_COURSES_GROUP;
-    this.routerHelper.navigate(groupPath, this.triggerLoader);
+    this.routerHelper.navigate(groupPath);
   }
 
 }

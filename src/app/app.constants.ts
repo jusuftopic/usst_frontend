@@ -13,6 +13,11 @@ export class AppConstants{
   public static readonly PATH_COURSES_INDIVIDUAL = 'individual';
   public static readonly PATH_COURSES_GROUP = 'group';
 
+  /* schedule */
+  public static readonly PATH_SCHEDULE = 'schedule';
+  public static readonly PATH_SCHEDULE_INDIVIDUAL = 'individual';
+  public static readonly PATH_SCHEDULE_GROUP = 'group';
+
   /* gallery */
   public static readonly PATH_GALLERY = 'gallery';
 

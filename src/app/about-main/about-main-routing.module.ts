@@ -4,8 +4,6 @@ import {AboutMainComponent} from './about-main.component';
 
 const routes: Routes = [
   {path: '', component: AboutMainComponent},
-
-
 ];
 
 @NgModule({
