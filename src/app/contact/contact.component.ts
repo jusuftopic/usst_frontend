@@ -54,7 +54,7 @@ export class ContactComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.width = '800px';
-    dialogConfig.height = '900px'
+    dialogConfig.height = '900px';
 
     this.dialog.open(PrivacyPolicyComponent, dialogConfig);
   }
