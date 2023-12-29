@@ -4,15 +4,15 @@
   <div class="container">
     <app-title [title]="title"></app-title>
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-6">
+      <div *ngFor="let course of courses" class="col-lg-4 col-md-6 col-sm-6">
         <div class="properties mb-30">
           <div class="properties__card">
             <div class="about-icon">
               <img src="assets/img/icon/price.svg" alt="">
             </div>
             <div class="properties__caption">
-              <span class="month">Basic rekreativci M/Ž</span>
-              <div class="single-features">
+              <span class="month">{{course.title}}</span>
+              <div  *ngIf="course.freeTrail" class="single-features">
                 <div class="features-icon">
                   <img src="assets/img/icon/check.svg" alt="">
                 </div>
@@ -20,7 +20,7 @@
                   <p>Probni trening</p>
                 </div>
               </div>
-              <div class="single-features">
+              <div *ngIf="course.coaching" class="single-features">
                 <div class="features-icon">
                   <img src="assets/img/icon/check.svg" alt="">
                 </div>
@@ -33,7 +33,7 @@
                   <img src="assets/img/icon/check.svg" alt="">
                 </div>
                 <div class="features-caption">
-                  <p>Rekreativci</p>
+                  <p>{{course.targetGroup}}</p>
                 </div>
               </div>
               <div class="single-features">
@@ -41,95 +41,7 @@
                   <img src="assets/img/icon/check.svg" alt="">
                 </div>
                 <div class="features-caption">
-                  <p>Poboljšanje pokretljivosti</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="properties mb-30">
-          <div class="properties__card">
-            <div class="about-icon">
-              <img src="assets/img/icon/price.svg" alt="">
-            </div>
-            <div class="properties__caption">
-              <span class="month">Rekreativci M/Ž</span>
-              <div class="single-features">
-                <div class="features-icon">
-                  <img src="assets/img/icon/check.svg" alt="">
-                </div>
-                <div class="features-caption">
-                  <p>Probni trening</p>
-                </div>
-              </div>
-              <div class="single-features">
-                <div class="features-icon">
-                  <img src="assets/img/icon/check.svg" alt="">
-                </div>
-                <div class="features-caption">
-                  <p>Pratnja trenera</p>
-                </div>
-              </div>
-              <div class="single-features">
-                <div class="features-icon">
-                  <img src="assets/img/icon/check.svg" alt="">
-                </div>
-                <div class="features-caption">
-                  <p>Napredni vježbači</p>
-                </div>
-              </div>
-              <div class="single-features">
-                <div class="features-icon">
-                  <img src="assets/img/icon/check.svg" alt="">
-                </div>
-                <div class="features-caption">
-                  <p>Poboljšanje fizičke spreme</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="properties mb-30">
-          <div class="properties__card">
-            <div class="about-icon">
-              <img src="assets/img/icon/price.svg" alt="">
-            </div>
-            <div class="properties__caption">
-              <span class="month">Kids GYM</span>
-              <div class="single-features">
-                <div class="features-icon">
-                  <img src="assets/img/icon/check.svg" alt="">
-                </div>
-                <div class="features-caption">
-                  <p>Probni trening</p>
-                </div>
-              </div>
-              <div class="single-features">
-                <div class="features-icon">
-                  <img src="assets/img/icon/check.svg" alt="">
-                </div>
-                <div class="features-caption">
-                  <p>Pratnja trenera</p>
-                </div>
-              </div>
-              <div class="single-features">
-                <div class="features-icon">
-                  <img src="assets/img/icon/check.svg" alt="">
-                </div>
-                <div class="features-caption">
-                  <p>Djeca 3-5 godina</p>
-                </div>
-              </div>
-              <div class="single-features">
-                <div class="features-icon">
-                  <img src="assets/img/icon/check.svg" alt="">
-                </div>
-                <div class="features-caption">
-                  <p>Osnovna motorika</p>
+                  <p>{{course.goal}}</p>
                 </div>
               </div>
             </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Schedule } from '../../../api/model/schedule.model';
+import { CourseSchedule } from '../../../assets/model/course.schedule.model';
+import { CourseService } from '../../../api/service/course.service';
+import { CourseType } from '../../../api/model/course.model';
 
 @Component({
   selector: 'app-schedule-individual',
@@ -10,13 +12,12 @@ export class ScheduleIndividualComponent implements OnInit {
 
   title: string = 'Raspored';
 
-  schedulesIndividual: Schedule[] = [
-    {title: 'Sport performanse', days: ['utorak', 'četvrtak'], time: '19-20h'}
-  ];
+  schedules: CourseSchedule[] = [];
 
-  constructor() { }
+  constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
+    this.schedules = this.courseService.getCoursesSchedule(CourseType.INDIVIDUAL);
   }
 
 }

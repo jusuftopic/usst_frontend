@@ -9,7 +9,7 @@
               <div class="topic-content">
                 <h3>Individualni treninzi</h3>
                 <p>Poboljšanje zdravstvenog statusa te sportskih performansi u cilju postizanja vrhunskih rezultata</p>
-                <a (click)="onIndividualCourseClick()" style="color: white" class="border-btn">Kursevi</a>
+                <a (click)="individualCourseEmitter.emit()" style="color: white" class="border-btn">Kursevi</a>
               </div>
             </div>
           </div>
@@ -23,7 +23,7 @@
               <div class="topic-content">
                 <h3>Grupni treninzi</h3>
                 <p>Muški i zenski grupni treninzi za početnike, napredne rekreativce i profesionalne sportaše</p>
-                <a (click)="onGroupCourseClick()" style="color: white" class="border-btn">Kursevi</a>
+                <a (click)="groupCourseEmitter.emit()" style="color: white" class="border-btn">Kursevi</a>
               </div>
             </div>
           </div>

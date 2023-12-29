@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Schedule } from '../../../api/model/schedule.model';
+import { CourseSchedule } from '../../../assets/model/course.schedule.model';
+import { CourseService } from '../../../api/service/course.service';
+import { CourseType } from '../../../api/model/course.model';
 
 @Component({
   selector: 'app-schedule-group',
@@ -10,15 +12,12 @@ export class ScheduleGroupComponent implements OnInit {
 
   title: string = 'Raspored';
 
-  schedulesGroup: Schedule[] = [
-    {title: 'Basic rekreativci M/Ž', days: ['ponedeljak', 'srijeda', 'petak'], time: '17-18h'},
-    {title: 'Rekreativci M/Ž', days: ['ponedeljak', 'srijeda', 'petak'], time: '18-19h'},
-    {title: 'Kids GYM', days: ['utorak', 'četvrtak'], time: '18-19h'}
-  ];
+  schedules: CourseSchedule[] = [];
 
-   constructor() { }
+   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
+     this.schedules = this.courseService.getCoursesSchedule(CourseType.GROUP);
   }
 
 }
