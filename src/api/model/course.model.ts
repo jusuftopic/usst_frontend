@@ -1,6 +1,6 @@
-import { Schedule } from './schedule.model';
+import { ScheduleDTO } from './schedule.model';
 
-export interface Course {
+export interface CourseDTO {
   id?: number;
   title?: string;
   type?: CourseType;
@@ -8,7 +8,14 @@ export interface Course {
   coaching?: boolean;
   targetGroup?: string;
   goal?: string;
-  schedule?: Schedule
+  schedule?: ScheduleDTO
+}
+
+export interface CourseMinimalDTO {
+
+  title?: string;
+  days?: string[];
+  time?: string;
 }
 
 export enum CourseType {

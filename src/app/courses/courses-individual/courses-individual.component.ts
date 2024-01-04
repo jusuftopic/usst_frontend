@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Course, CourseType } from '../../../api/model/course.model';
+import { CourseDTO, CourseType } from '../../../api/model/course.model';
 import { CourseService } from '../../../api/service/course.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { CourseService } from '../../../api/service/course.service';
 })
 export class CoursesIndividualComponent implements OnInit {
 
-  courses: Course[] = [];
+  courses: CourseDTO[] = [];
 
   title: string = 'Kursevi';
 
@@ -17,7 +17,8 @@ export class CoursesIndividualComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.courses = this.courseService.getCourses(CourseType.INDIVIDUAL);
+    this.courseService.getCourses(CourseType.INDIVIDUAL)
+      .subscribe(courses => this.courses = courses);
   }
 
 }

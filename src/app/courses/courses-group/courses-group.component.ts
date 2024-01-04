@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../../../api/service/course.service';
-import { Course, CourseType } from '../../../api/model/course.model';
+import { CourseDTO, CourseType } from '../../../api/model/course.model';
 
 @Component({
   selector: 'app-courses-group',
@@ -9,7 +9,7 @@ import { Course, CourseType } from '../../../api/model/course.model';
 })
 export class CoursesGroupComponent implements OnInit{
 
-  courses: Course[] = [];
+  courses: CourseDTO[] = [];
 
   title: string = 'Kursevi';
   path: string = 'group';
@@ -18,7 +18,8 @@ export class CoursesGroupComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.courses = this.courseService.getCourses(CourseType.GROUP);
+    this.courseService.getCourses(CourseType.GROUP)
+      .subscribe(courses => this.courses = courses);
   }
 
 

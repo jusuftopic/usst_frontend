@@ -17,7 +17,8 @@ export class ScheduleIndividualComponent implements OnInit {
   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
-    this.schedules = this.courseService.getCoursesSchedule(CourseType.INDIVIDUAL);
+    this.courseService.getCoursesSchedule(CourseType.INDIVIDUAL)
+      .subscribe(schedules => this.schedules = schedules)
   }
 
 }

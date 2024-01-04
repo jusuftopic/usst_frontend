@@ -1,4 +1,5 @@
-export interface Schedule {
+export interface ScheduleDTO {
+  id?: number;
   days?: string[];
   time: string;
 }
